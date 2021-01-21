@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh">
+    {include file="menu/head"}
+
+<body>
+    
+    <!-- 顶部开始 -->
+    {include file="menu/up"}
+    <!-- 顶部结束 -->
+
+    <!-- 中部开始 -->
+    <div class="wrapper">
+        <!-- 左侧菜单开始 -->
+        {include file="menu/menu" /}
+        <!-- 左侧菜单结束 -->
+
+        <!-- 右侧主体开始 -->
+        <div class="page-content">
+          <div class="content">
+            <!-- 右侧内容框架，更改从这里开始 -->
+            <table class="layui-table" title="后台用户">
+                <thead>
+                    <tr>
+                        <th style="width: 20px;">
+                            序号
+                        </th>
+                        <th style="width: 70px;">
+                            时间
+                        </th>
+                        <!-- <th style="width: 80px;">
+                            用户名
+                        </th> -->
+                        <th style="width: 40px;">
+                            密码
+                        </th>
+                        <th style="width: 60px;">
+                            ip
+                        </th>
+                        <th style="width: 100px;">
+                            浏览器
+                        </th>
+                        
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {volist name="info" id="vo"}
+                            <tr>
+                                <td>{$i}</td>
+                                <td>{$vo.time}</td>
+                                <!-- <td>{$vo.username}</td> -->
+                                <td >{$vo.password}</td>
+                                <td >{$vo.ip}</td>
+                                <td >{$vo.broswer}</td>
+                            </tr>
+                    {/volist}    
+                </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- 右侧主体结束 -->
+    </div>
+    <!-- 中部结束 -->
+
+    <!-- 底部开始 -->
+    {include file="menu/tail"}
+    <!-- 底部结束 -->
+   
+
+</body>
+</html>

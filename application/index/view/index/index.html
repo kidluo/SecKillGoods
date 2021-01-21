@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<head>
+        <meta charset="UTF-8">
+        <title>秒杀系统</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="/static/X-admin/css/font.css">
+        <link rel="stylesheet" href="/static/X-admin/css/xadmin.css">
+        <link rel="stylesheet" href="https://cdn.bootcss.com/Swiper/3.4.2/css/swiper.min.css">
+        <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+        <script src="/static/X-admin/lib/layui/layui.js" charset="utf-8"></script>
+        <script type="text/javascript" src="/static/X-admin/js/xadmin.js"></script>
+    </head>
+
+</head>
+
+<body>
+    <blockquote class="layui-elem-quote" style="text-align: center;font-size:30px;">
+        秒杀系统
+    </blockquote>
+        
+    <form class="layui-form" action="../index/handle" method="POST">
+            <div class="layui-form-item">
+                <label for="level-kiss" class="layui-form-label">
+                    数量（限购3个）
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="count" name="count" required="" value="" lay-verify="required"
+                    autocomplete="off" class="layui-input" onkeyup="checkNum(this.value)">
+                    <span id="b_id" style="color: red;"></span>
+
+                </div>
+            </div>
+            <br>
+            <div class="layui-form-item">
+                <label for="L_repass" class="layui-form-label">
+                </label>
+                <button  class="layui-btn" lay-filter="save" lay-submit="">
+                    提交
+                </button>
+            </div>            
+    </form>
+
+    <div class="layui-form-item">
+        <label for="L_repass" class="layui-form-label">
+        </label>
+        <button  class="layui-btn" lay-filter="save" lay-submit="" onclick="window.location.href = '../index/res'">
+            查看秒杀结果
+        </button>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="layui-form-item">
+        <label for="L_repass" class="layui-form-label">
+        </label>
+        <button  class="layui-btn" lay-filter="save" lay-submit="" onclick="window.location.href = '../login/logout'">
+            退出登录
+        </button>
+    </div>
+   
+</body>
+</html>
+
+<script>
+   
+
+    function checkNum(x) {
+    var text;
+
+
+    // 如果输入的值 x 不是数字或者小于 1 或者大于 10，则提示错误 Not a Number or less than one or greater than 10
+    if (isNaN(x) || x < 1 || x > 3) {
+        text = "请输入正确的数量";
+    } else {
+        text = "";
+    }
+    document.getElementById("b_id").innerHTML = text;
+}
+
+  
+</script>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+    {include file="menu/head"}
+<body>
+    <!-- 顶部开始 -->
+    {include file="menu/up"}
+    <!-- 顶部结束 -->
+
+    <!-- 中部开始 -->
+    <div class="wrapper">
+        <!-- 左侧菜单开始 -->
+        {include file="menu/menu" /}
+        <!-- 左侧菜单结束 -->
+
+        <!-- 右侧主体开始 -->
+        <div class="page-content">
+            <div class="content">
+
+            <fieldset class="layui-elem-field layui-field-title site-title">
+                <legend style="text-align: center;"><a name="default" >修改数量</a></legend>
+            </fieldset>
+
+            <form class="layui-form"  method="GET" action="../product/modify">
+                <div class="layui-form-item">
+                    <label for="level-id" class="layui-form-label">
+                        原数量
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="text" id="level-id" name="level-id" disabled="" value={$cnt} class="layui-input">
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label for="level-name" class="layui-form-label">
+                        新数量
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="text" id="level-name" name="number" required="" lay-verify="required"
+                        autocomplete="off" value="" class="layui-input">
+                    </div>
+                </div>
+            
+                <div class="layui-form-item">
+                    <label for="L_repass" class="layui-form-label">
+                    </label>
+                    <button  class="layui-btn" lay-filter="save" lay-submit="">
+                        提交修改
+                    </button>
+                </div>
+            </form>
+            </div>
+        </div>
+
+        <!-- 右侧主体结束 -->
+    </div>
+    <!-- 中部结束 -->
+
+    <!-- 底部开始 -->
+    {include file="menu/tail"}
+    <!-- 底部结束 -->
+
+</body>
+</html>

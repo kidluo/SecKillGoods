@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh">
+    {include file="menu/head"}
+
+<body>
+    
+    <!-- 顶部开始 -->
+    {include file="menu/up"}
+    <!-- 顶部结束 -->
+
+    <!-- 中部开始 -->
+    <div class="wrapper">
+        <!-- 左侧菜单开始 -->
+        {include file="menu/menu" /}
+        <!-- 左侧菜单结束 -->
+
+        <!-- 右侧主体开始 -->
+        <div class="page-content">
+          <div class="content">
+            <!-- 右侧内容框架，更改从这里开始 -->
+            <table class="layui-table" title="管理员用户">
+                <thead>
+                    <tr>
+                        <th>
+                            序号
+                        </th>
+                        <th>
+                            用户名
+                        </th>
+                        <th>
+                            创建时间
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {volist name="info" id="vo"}
+                            <tr>
+                                <td style="width: 20px;">{$i}</td>
+                                <td style="width: 20px;">{$vo.username}</td>
+                                <td style="width: 100px;" class="td-manage">
+                                    {$vo.createtime}
+                                </td>
+                              
+                            </tr>
+                    {/volist}    
+                </tbody>
+            </table>
+            <!-- 右侧内容框架，更改从这里结束 -->
+           
+
+
+          </div>
+        </div>
+        <!-- 右侧主体结束 -->
+    </div>
+    <!-- 中部结束 -->
+
+    <!-- 底部开始 -->
+    {include file="menu/tail"}
+    <!-- 底部结束 -->
+   
+
+</body>
+</html>

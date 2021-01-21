@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh">
+    {include file="menu/head"}
+
+<body>
+    
+    <!-- 顶部开始 -->
+    {include file="menu/up"}
+    <!-- 顶部结束 -->
+
+    <!-- 中部开始 -->
+    <div class="wrapper">
+        <!-- 左侧菜单开始 -->
+        {include file="menu/menu" /}
+        <!-- 左侧菜单结束 -->
+
+        <!-- 右侧主体开始 -->
+        <div class="page-content">
+          <div class="content">
+            <!-- 右侧内容框架，更改从这里开始 -->
+            <table class="layui-table" title="管理员用户">
+                <thead>
+                    <tr>
+                        <th>
+                            序号
+                        </th>
+                        <th>
+                            用户名
+                        </th>
+                        <th>
+                            创建时间
+                        </th>
+                        <th>
+                            删除用户
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {volist name="info" id="vo"}
+                            <tr>
+                                <td style="width: 40px;">{$i}</td>
+                                <td style="width: 70px;">{$vo.username}</td>
+                                <td style="width: 100px;">
+                                    {$vo.createtime}
+                                </td>
+                                <td class="td-manage" style="width: 100px;">
+                                    <a title="彻底删除" onclick="javascript:return del();" href="del?id={$vo.id}"  >
+                                        <i class="layui-icon" >&#xe640;</i>
+                                    </a>
+                                </td>
+                              
+                            </tr>
+                    {/volist}    
+                </tbody>
+            </table>
+            <!-- 右侧内容框架，更改从这里结束 -->
+           
+
+
+          </div>
+        </div>
+        <!-- 右侧主体结束 -->
+    </div>
+    <!-- 中部结束 -->
+
+    <!-- 底部开始 -->
+    {include file="menu/tail"}
+    <!-- 底部结束 -->
+   
+
+</body>
+</html>
+
+<script>
+    function del() {
+        var msg = "您真的确定要删除吗？\n\n请确认！";
+        if (confirm(msg)==true){
+        return true;
+        }else{
+        return false;
+        }
+        }
+</script>

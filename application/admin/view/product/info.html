@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+    {include file="menu/head"}
+<body>
+    <!-- 顶部开始 -->
+    {include file="menu/up"}
+    <!-- 顶部结束 -->
+
+    <!-- 中部开始 -->
+    <div class="wrapper">
+        <!-- 左侧菜单开始 -->
+        {include file="menu/menu" /}
+        <!-- 左侧菜单结束 -->
+
+        <!-- 右侧主体开始 -->
+        <div class="page-content">
+          <div class="content">
+           
+
+           
+            <div style="text-align: center;font-size: 18px;">
+                商品信息
+            </div>
+            <table class="layui-table">
+                <thead>
+                    <tr>
+                        <th>名称</th>
+                        <th>型号</th>
+                        <th>数量</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>iPad Pro</td>
+                        <td>第11代</td>                   
+                        <td>{$cnt}</td>                   
+                    </tr>
+                </tbody>
+            </table>
+
+           
+            <!-- 右侧内容框架，更改从这里结束 -->
+          </div>
+        </div>
+        <!-- 右侧主体结束 -->
+    </div>
+    <!-- 中部结束 -->
+
+    <!-- 底部开始 -->
+    {include file="menu/tail"}
+    <!-- 底部结束 -->
+
+</body>
+</html>

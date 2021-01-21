@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+    {include file="menu/head"}
+<body>
+    <!-- 顶部开始 -->
+    {include file="menu/up"}
+    <!-- 顶部结束 -->
+
+    <!-- 中部开始 -->
+    <div class="wrapper">
+        <!-- 左侧菜单开始 -->
+        {include file="menu/menu" /}
+        <!-- 左侧菜单结束 -->
+
+        <!-- 右侧主体开始 -->
+        <div class="page-content">
+          <div class="content">
+           
+
+            <fieldset class="layui-elem-field layui-field-title site-title">
+              <legend style="text-align: center;"><a name="default" >当前秒杀商品</a></legend>
+            </fieldset>
+            <div style="text-align: center;font-size: 18px;">
+                
+            </div>
+            <table class="layui-table">
+                <thead>
+                    <tr>
+                        <th>名称</th>
+                        <th>开始时间</th>
+                        <th>结束时间</th>
+                        <th>抢购链接</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>iPad Pro</td>
+                        <td>2021-01-25</td> 
+                        <td>2021-01-27</td>  
+                        <td>luomk.top/index/index/index</td>                                                                        
+                    </tr>
+                </tbody>
+            </table>
+
+            <div>
+                <img class="item" src="/static/ipad.jpeg" width="460" >
+            </div>
+
+
+           
+            <!-- 右侧内容框架，更改从这里结束 -->
+          </div>
+        </div>
+        <!-- 右侧主体结束 -->
+    </div>
+    <!-- 中部结束 -->
+
+    <!-- 底部开始 -->
+    {include file="menu/tail"}
+    <!-- 底部结束 -->
+
+</body>
+</html>
